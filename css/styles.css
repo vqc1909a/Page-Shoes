@@ -1,0 +1,374 @@
+*,
+*:after,
+*:before {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+html {
+     font-size: 62.5%;
+     overflow-x: hidden;
+     --header1: calc(8rem + 1vw);
+     --header2: calc(4rem + 1vw);
+     --header3: calc(2rem + 1vw);
+     --header4: calc(1.5rem + 1vw);
+     --text: calc(.6rem + 1vw);
+     --special-color: #862F29;
+     --background-color: #272525;
+}
+@font-face{
+     font-family: 'Russo';
+     src: url('../fonts/RussoOne-Regular.ttf');
+}
+
+
+body {
+     font-family: 'Russo', sans-serif;
+     animation: opening 1s ease-in-out;
+}
+
+h1 {
+     font-size: var(--header1);
+}
+
+h2 {
+     font-size: var(--header2);
+}
+
+h3 {
+     font-size: var(--header3);
+}
+
+h4,
+h5 {
+     font-size: var(--header4);
+}
+
+li,
+button,
+p,
+input,
+label,
+a {
+     font-size: var(--text);
+}
+
+a {
+     text-decoration: none;
+     color: #798191;
+}
+
+ul {
+     list-style: none;
+}
+
+textarea{
+    resize: none;
+}
+
+button {
+     padding: 2rem 4rem;
+     border: none;
+     background-color: var(--special-color);
+     color: white;
+     font-weight: bolder;
+     cursor: pointer;
+     transition: background .5s ease-in-out;
+}
+
+.flex {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+}
+
+.container {
+     width: 90%;
+     margin: auto;
+     display: flex;
+     flex-wrap: wrap;
+}
+
+
+@keyframes opening {
+     from {
+          opacity: 0
+     }
+
+     to {
+          opacity: 1;
+     }
+}
+
+/* SECTION HEADER */
+.header{
+     background-color: #D9D9D9;
+     color: #798191;
+}
+.navbar{
+     padding: 2rem 0;
+     min-height: 10vh;
+     align-items: center;
+     justify-content: flex-end;
+}
+.logo{
+     flex: 1 1 25rem;
+}
+.nav{
+     flex: 1 1 25rem;
+}
+.nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.nav ul li:last-child{
+     display: flex;
+}
+.nav ul li .cart-image{
+     margin: 0 1rem;
+}
+.nav ul li .quantity-products{
+     padding: 1.5rem;
+     border-radius : 50%;
+     background-color: #798191;
+     color: white;
+}
+/* SECTION HERO */
+.hero{
+     background-color: #D9D9D9;
+     min-height: 90vh;
+}
+.hero-content{
+     flex: 2 1 40rem;
+     justify-content: center;
+     height: 90vh;
+     padding-bottom: 5rem;
+}
+.hero-content h1{
+     color: var(--special-color);
+     margin: 1rem 0;
+}
+.hero-content h3 {
+     color: #893330;
+     margin: 0 0 1rem 0;
+}
+.hero-content .hero-buttons {
+     margin: 1rem 0;
+}
+
+.hero-content .hero-buttons button:last-child {
+     margin-left: 1rem;
+     border: 3px solid #798191;
+     padding: calc(2rem - 3px) calc(4rem - 3px);
+     background-color: transparent;
+     color: #798191;
+}
+
+.hero-image{
+     flex: 1 1 40rem;
+     height: 90vh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding-bottom: 5rem;
+
+}
+.hero-image img{
+     width: 70%;    
+     object-fit: cover;
+}
+
+/* SECTION PRODUCT */
+.product{
+     background-color: var(--background-color);
+     color: white;
+     min-height: 100vh;
+}
+.product-content{
+     flex: 1 1 40rem;
+     height: 100vh;
+     margin: 1.5rem 0;
+}
+.product-content .product-description h2{
+     margin: 2rem 0;
+}
+.product-content .product-description p{
+     margin: 1.5rem 0;
+}
+.product-content .product-description p:last-child span {
+    font-size: calc(1rem + 1vw);
+}
+.product-content .product-button{
+     margin: 2rem 0;
+}
+.product-wrapper-image{
+     flex: 1 1 40rem;
+     height: 100vh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin: 1.5rem 0;
+}
+.product-image{
+     margin: 5rem;
+     padding: 5rem;
+     background-color: rgba(196, 196, 196, 20%);
+     border-radius: 50px;
+}
+.product-image img{
+     width: 100%;
+}
+.product-slider{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin: 2rem 0;
+}
+.product-slider span{
+     padding: 3rem;
+     background-color: #FF9533;
+     border-radius: 50%;
+     margin: 0 1rem;
+     
+}
+.product-slider span:nth-child(1){
+     background-color: #FC363C;
+}
+.product-slider span:nth-child(2) {
+     background-color: #5956FF;
+}
+.product-slider span:nth-child(3) {
+     background-color: #3AD94A;
+}
+
+/* CONTACT SECTION */
+
+.contact{
+     background-color: #ffffff;
+     min-height: 100vh;
+     width: 95%;
+     margin-left: auto;
+     display: flex;
+     flex-wrap: wrap;
+     position: relative;
+}
+.contact-content{
+     flex: 1 1 40rem;
+     align-items: center;
+     color: var(--special-color);
+}
+.contact-content h2{
+     font-size: calc(4rem + 1vw);
+}
+.contact-wrapper-image{
+     flex: 6 1 40rem;
+     position: relative;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+.contact-wrapper-image img{
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     z-index: 0;
+}
+.contact-wrapper-image form{
+     width: 45%;
+     z-index: 1;
+     text-align: center;
+}
+.contact-wrapper-image .field{
+     text-align: start;
+     display: flex;
+     flex-direction: column;
+     margin: 2rem 0;
+}
+.contact-wrapper-image .field label{
+     color: white;
+     margin: 1rem 0
+}
+.contact-wrapper-image .field input,
+.contact-wrapper-image .field textarea{
+     background: transparent;
+     border: 3px solid var(--special-color);
+     overflow: hidden;
+     color: white;
+}
+.contact-wrapper-image button{
+     margin: 3rem 0;
+}
+
+
+
+
+/* MEDIA FRAMENS */
+@media only screen and (max-width: 1110px){
+     .hero-image{
+          display: none;
+     }
+     .hero-content{
+          align-items: center;
+     }
+   
+     html {
+          --header1: calc(6rem + 1vw);
+     }    
+}
+
+@media only screen and (max-width: 935px) {
+    .product-content{
+         height: inherit;
+         text-align: center;
+         order: 2;
+    }
+    .product-wrapper-image{
+           order: 1;
+           height: inherit;
+    }
+     .product-image {
+          margin: 5rem;
+          padding: 2.5rem;
+     }
+     .product-slider span {
+          padding: 2rem;
+     }
+     .contact-wrapper-image{
+          align-items: flex-end;
+     }
+    
+     .contact-content{
+          position: absolute;
+          top: 5%;
+          left: 50%;
+          width: 80%;
+          transform: translate(-50%, -5%);
+          z-index: 2;
+     }
+}
+@media only screen and (max-width: 700px) {
+     .contact-wrapper-image form {
+          width: 60%;
+     }
+    .contact-content {
+         top: 10%;
+         transform: translate(-50%, -10%);
+    }
+      .contact-content h2 {
+          font-size: calc(3rem + 1vw);
+      }
+     .product-image {
+          margin: 2rem;
+          padding: 2rem;
+          order: 1;
+     }
+
+    
+}
+
+
